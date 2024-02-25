@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  ubuntu:
+    image: irasc/drone_robotics:new_vnc
+    container_name: ubuntu
+    stdin_open: true  # Equivalent to -i in docker run
+    tty: true         # Equivalent to -t in docker run
+    restart: unless-stopped
+    ports:
+      - "6080:80"
