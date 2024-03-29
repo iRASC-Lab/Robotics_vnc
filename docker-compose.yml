@@ -1,12 +1,12 @@
 version: "3.7"
 services:
   ubuntu:
-    image: irasc/drone_robotics:new_vnc
+    image: irasc/drone_robotics:latest
     container_name: ubuntu
     stdin_open: true # Equivalent to -i in docker run
     tty: true # Equivalent to -t in docker run
     volumes:
-    - /home/ubuntu/Robotics_vnc/catkin_ws:/home/ubuntu/catkin_ws
+    - /home/ubuntu/Robotics_vnc/shell:/home/ubuntu/Desktop/shell
     restart: unless-stopped
     ports:
       - "6080:80"
